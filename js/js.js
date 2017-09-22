@@ -34,6 +34,12 @@ console.log('working');
 		$(".buttons2").append(equals);
 		equals.css("background-color", "pink");
 
+		const clear_ok = $('<div>').on('click', (e) => {	clear_it();	});
+		clear_ok.text("CLEAR");
+		$(".buttons2").append(clear_ok);
+		clear_ok.css("background-color", "pink");
+
+
 		let display = $('<div>');// = $('<div>').on('click', (e) => {		});
 		display.text("00000000");
 		$(".number").append(display);
@@ -44,13 +50,14 @@ console.log('working');
 		$(".number").append(argument);
 		argument.css("background-color", "pink");
 
-let state = 'clear';
+state = "clear";
 let number_array1 = [];
 let buffer = 0;
 let number_array2 = 0.1;
 
 
 const number_add = (number) => {
+if (state !== "clear") {clear_it();}
 number_array1.push(number);
 
 display.text(number_array1.join(""));
@@ -120,6 +127,16 @@ display.text(number_array2);
 number_array2 = 0.1;
 console.log(number_array2, number_array1,buffer);
 argument.text("");
+state = "do it";
+}
+
+const clear_it = () => {
+	state = "clear";
+ number_array1 = [];
+ buffer = 0;
+ number_array2 = 0.1;
+display.text("0000000");
+
 }
 
 
