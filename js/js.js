@@ -53,11 +53,12 @@ console.log('working');
 state = "clear";
 let number_array1 = [];
 let buffer = 0;
-let number_array2 = 0.1;
+let number_array2 = 0;
+let number_array3 = 0;
 
 
 const number_add = (number) => {
-if (state !== "clear") {clear_it();}
+if (buffer === "x") { clear_it();}
 number_array1.push(number);
 
 display.text(number_array1.join(""));
@@ -65,78 +66,87 @@ display.text(number_array1.join(""));
 
 
 const add = () => {
-if (buffer === 0) {
-if (number_array2 !== 0.1) {
-number_array2 = parseInt(number_array1.join("")) + number_array2;
-}
-else {number_array2 = parseInt(number_array1.join(""));}
-buffer = "add";
+console.log(number_array2, number_array1, buffer);
+	if ((buffer !== "x") && (number_array2 !== 0)) {
+		number_array2 = parseInt(number_array1.join("")) + number_array2;
+		display.text(number_array2);
+	}
+else if (buffer !== "x") {
+number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
-console.log(number_array2, number_array1);
-display.text(number_array2);
+}
+buffer = "add";
 argument.text("PLUS");
-}}
+}
 
 const sub = () => {
-if (buffer === 0) {
-if (number_array2 !== 0.1) {
-number_array2 = number_array2 - parseInt(number_array1.join(""));
-}
-else {number_array2 = parseInt(number_array1.join(""));}
-buffer = "sub";
+console.log(number_array2, number_array1, buffer);
+	if ((buffer !== "x") && (number_array2 !== 0)) {
+		number_array2 = number_array2 - parseInt(number_array1.join(""));
+		display.text(number_array2);
+	}
+else if (buffer !== "x") {
+number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
-console.log(number_array2, number_array1);
-display.text(number_array2);
+}
+buffer = "sub";
 argument.text("MINUS");
-}}
+}
 
 const multi = () => {
-if (buffer === 0) {
-if (number_array2 !== 0.1) {
-number_array2 = parseInt(number_array1.join("")) * number_array2;
-}
-else {number_array2 = parseInt(number_array1.join(""));}
-
-buffer = "multi";
+console.log(number_array2, number_array1, buffer);
+	if ((buffer !== "x") && (number_array2 !== 0)) {
+		number_array2 = number_array2 * parseInt(number_array1.join(""));
+		display.text(number_array2);
+	}
+else if (buffer !== "x") {
+number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
-console.log(number_array2, number_array1);
-display.text(number_array2);
+}
+buffer = "multi";
 argument.text("TIMES");
-}}
+}
+
 
 const divided = () => {
-if (buffer === 0) {
-if (number_array2 !== 0.1) {
-number_array2 = number_array2 / parseInt(number_array1.join(""));
-}
-else {number_array2 = parseInt(number_array1.join(""));}
-
-buffer = "divide";
+console.log(number_array2, number_array1, buffer);
+	if ((buffer !== "x") && (number_array2 !== 0)) {
+		number_array2 = number_array2 - parseInt(number_array1.join(""));
+		display.text(number_array2);
+	}
+else if (buffer !== "x") {
+number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
-console.log(number_array2, number_array1);
-display.text(number_array2);
-argument.text("DIVIDE");
-}}
+}
+buffer = "divide";
+argument.text("DIVIDED");
+}
+
 const equal = () => {
+//if (number_array2 === 0.1) {console.log("ok"); display.text("0000000");}
+//else {
+console.log(number_array3, number_array2, number_array1,buffer);
+
 if (buffer === "add") {number_array2 = parseInt(number_array1.join("")) + number_array2;}
 if (buffer === "sub") {number_array2 = number_array2 - parseInt(number_array1.join(""));}
 if (buffer === "multi") {number_array2 = parseInt(number_array1.join("")) * number_array2;}
 if (buffer === "divide") {number_array2 = number_array2 / parseInt(number_array1.join(""));}
-buffer = 0;
-number_array1 = []
-number_array1[0] = number_array2
+
+buffer = "x";
+number_array1 = [];
 display.text(number_array2);
-number_array2 = 0.1;
+//number_array2 = 0;
+//number_array2 = 0.1;
 console.log(number_array2, number_array1,buffer);
 argument.text("");
 state = "do it";
-}
+}//}
 
 const clear_it = () => {
 	state = "clear";
  number_array1 = [];
  buffer = 0;
- number_array2 = 0.1;
+ number_array2 = 0;
 display.text("0000000");
 
 }
