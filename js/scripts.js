@@ -54,56 +54,221 @@ const secondArray = [];
 let secondArrayValue = 0;
 let identifyOp = null;
 
-const logNumber = (item) => {
-	if (identifyOp === null){
-		firstArray.push(item);
-		const trial = firstArray.length;
-		parseInt(firstArray[trial - 1]);
-		return firstArray[trial - 1];
-	} else{
-		secondArray.push(item);
-		const trial = secondArray.length;
-		parseInt(secondArray[trial - 1]);
-		return secondArray[trial - 1];
+$('#icon-0').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
 	}
-}
+})
 
-$('#icon-0').on('click', logNumber('7'));
+$('#icon-1').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-//I'm having a lot of trouble assembling the calculator from here
-//Ran up against an error in the guts of jQuery itself that reads
-//Uncaught TypeError: Cannot create property 'guid' on string '7'
+$('#icon-2').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-//my plan from here was to:
-//create an array constituting the whole of the first array into the calculator
-//this could be up to seven digits
-//join the array and parseInt upon one of the four functions being clicked
-//upon calling parseInt, generate it as the text for #output-screen
-//also save the joined and parsed array as firstArrayValue
+$('#icon-4').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-firstArray.join();
-firstArrayValue = parseInt(firstArray);
-$('#output-screen').text(firstArrayValue);
+$('#icon-5').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-//I've set up the four functions to run based on whether
-//+ - * or / is clicked
-//I would set up a global variable that takes on a new value whenever
-//any of the four functions is clicked
-//and stays that way through the process
+$('#icon-6').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-//the secondArray will be constituted and parsed like the first
-//as is set up with the if else earlier
+$('#icon-8').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-//then, upon the equal sign being clicked
-//a conditional statement will run
-//that depends upon the variable 
-//one of the four functions defined at the top will be run
-//and an answer will be returned
-//and defined as the text for #output-screen
+$('#icon-9').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-//something like this
+$('#icon-10').on('click', (e) => {
+	if (identifyOp === null && firstArray.length < 7){
+		firstArray.push(e.currentTarget.innerText);
+		let trial = firstArray.length;
+		let trialInt = parseInt(firstArray[trial - 1]);
+		firstArray[trial - 1] = trialInt;
+		let connect = firstArray.join('');
+		firstArrayValue = parseInt(connect);
+		$('#output-screen').text(firstArrayValue);
+	} else if (identifyOp !== null && secondArray.length < 7){
+		secondArray.push(e.currentTarget.innerText);
+		let trial = secondArray.length;
+		let trialInt = parseInt(secondArray[trial - 1]);
+		secondArray[trial - 1] = trialInt;
+		let connect = secondArray.join('');
+		secondArrayValue = parseInt(connect);
+		$('#output-screen').text(secondArrayValue);
+	} else {
+		;
+	}
+})
 
-const clickEquals = () => {
+$('#icon-15').on('click', (e) => {
+	identifyOp = 'add';
+})
+
+$('#icon-11').on('click', (e) => {
+	identifyOp = 'subt';
+})
+
+$('#icon-7').on('click', (e) => {
+	identifyOp = 'mult';
+})
+
+$('#icon-3').on('click', (e) => {
+	identifyOp = 'div';
+})
+
+$('#icon-14').on('click', (e) => {
 	if (identifyOp === 'add'){
 		const answer = addition(firstArrayValue, secondArrayValue);
 		$('#output-screen').text(answer);
@@ -121,11 +286,15 @@ const clickEquals = () => {
 		$('#output-screen').text(answer);
 		return answer;
 	} else {
-		console.log('Error.');
+		$('#output-screen').text('Error.');
 	}
-}
+})
 
-//pressing the clear button will clear the text for #output-screen
-//it will also reset firstArray, firstArrayValue,
-//secondArray, secondArrayValue, and identifyOp.
-
+$('#clear-button').on('click', (e) => {
+	$('#output-screen').text('');
+	firstArray.length = 0;
+	firstArrayValue = 0;
+	secondArray.length = 0;
+	secondArrayValue = 0;
+	identifyOp = null;
+})
