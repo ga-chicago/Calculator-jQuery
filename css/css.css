@@ -6,24 +6,34 @@ html, body {
   height: 5vh;
   margin-right: 1%;
   margin-top: 1%;
+  text-align: center;
   display: inline-block;
   background-color: blue;
 }
 .buttons2 div {
   width:  15%;
   height: 5vh;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-right: 1%;
+  text-align: center;
   display: inline-block;
   background-color: blue;
 }
 
 .number {
-  width: 100%;
+  width: 400px;
   display: block;
   height: 100px;
-  background-color: #79A68D;
+  background-color: red;
   margin-bottom: 1%;
   padding-bottom: 1%;
   padding-left: 1.5%;
+}
+
+#buttons_wrap {
+  width: 400px;
+}
+
+#buttons2_wrap {
+  width: 400px;
 }
