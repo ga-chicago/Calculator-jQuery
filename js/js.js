@@ -67,12 +67,15 @@ let number_array3 = 0;
 const number_add = (number) => {
 if (buffer === "x") { clear_it();}
 number_array1.push(number);
-
+state = "its ok"
 display.text(number_array1.join(""));
 }
 
 
 const add = () => {
+
+if (state == "waiting" ) {buffer = "add"; argument.text("PLUS");return}
+
 if (buffer === "add") {equal();}
 if (buffer === "sub") {equal();}
 if (buffer === "multi") {equal();}
@@ -89,10 +92,13 @@ number_array1 = [];
 
 
 buffer = "add";
+state = "waiting";
 argument.text("PLUS");
 }
 
 const sub = () => {
+if (state == "waiting" ) {buffer = "sub"; argument.text("MINUS");return}
+
 if (buffer === "add") {equal();}
 if (buffer === "sub") {equal();}
 if (buffer === "multi") {equal();}
@@ -108,11 +114,13 @@ number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
 }
 buffer = "sub";
+state = "waiting";
 argument.text("MINUS");
 }
 
 const multi = () => {
-	if (buffer === "add") {equal();}
+if (state == "waiting" ) {buffer = "multi"; argument.text("TIMES");return}
+if (buffer === "add") {equal();}
 if (buffer === "sub") {equal();}
 if (buffer === "multi") {equal();}
 if (buffer === "divide") {equal();}
@@ -127,12 +135,14 @@ number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
 }
 buffer = "multi";
+state = "waiting";
 argument.text("TIMES");
 }
 
 
 const divided = () => {
-	if (buffer === "add") {equal();}
+if (state == "waiting" ) {buffer = "divide"; argument.text("DIVIDED");return}
+if (buffer === "add") {equal();}
 if (buffer === "sub") {equal();}
 if (buffer === "multi") {equal();}
 if (buffer === "divide") {equal();}
@@ -146,6 +156,7 @@ number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
 }
 buffer = "divide";
+state = "waiting";
 argument.text("DIVIDED");
 }
 
