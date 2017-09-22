@@ -1,0 +1,36 @@
+h1 {
+ 	text-align: center;
+ }
+ 
+ .calc-container {
+ 	display: flex;
+ 	justify-content: center;
+ }
+ 
+ .calculator {
+ 	align-items: center;
+ 	display: flex;
+ 	justify-content: center;
+ 	width: 300px;
+ 	height: 500px;
+ 	flex-direction: row;
+ 	flex-wrap: wrap;
+ 	border: .5em solid black;
+ 	border-radius: 5%;
+ }
+ 
+ .screen {
+ 	height: 1.2em;
+ 	flex-basis: 100%;
+ 	font-size: 4em;
+ 	border: 2px solid black;
+ 	text-align: right;
+ 	margin: 2%;
+ }
+ .button {
+ 	flex-basis: 1.2em;
+ 	margin:2%;
+ 	font-size: 3em;
+ 	text-align: center;
+ 	border: .05em solid black;
+ }
