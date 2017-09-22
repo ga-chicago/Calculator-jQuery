@@ -66,15 +66,16 @@ display.text(number_array1.join(""));
 
 
 const add = () => {
-console.log(number_array2, number_array1, buffer);
 	if ((buffer !== "x") && (number_array2 !== 0)) {
 		number_array2 = parseInt(number_array1.join("")) + number_array2;
 		display.text(number_array2);
 	}
-else if (buffer !== "x") {
+else if (buffer === 0) {
 number_array2 = parseInt(number_array1.join(""));
 number_array1 = [];
 }
+
+
 buffer = "add";
 argument.text("PLUS");
 }
@@ -131,7 +132,6 @@ if (buffer === "add") {number_array2 = parseInt(number_array1.join("")) + number
 if (buffer === "sub") {number_array2 = number_array2 - parseInt(number_array1.join(""));}
 if (buffer === "multi") {number_array2 = parseInt(number_array1.join("")) * number_array2;}
 if (buffer === "divide") {number_array2 = number_array2 / parseInt(number_array1.join(""));}
-
 buffer = "x";
 number_array1 = [];
 display.text(number_array2);
