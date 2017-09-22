@@ -59,6 +59,7 @@ console.log('working');
 
 state = "clear";
 let number_array1 = [];
+number_array1[0] = 0;
 let buffer = 0;
 let number_array2 = 0;
 let number_array3 = 0;
