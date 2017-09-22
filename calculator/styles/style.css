@@ -1,0 +1,53 @@
+
+body {
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(119, 16, 16);
+	width:50%;
+	padding: 14%;
+}
+.calculator{
+	background-color: rgba(18, 37, 132, 1);
+	box-shadow: 0px 0px 9px 16px rgba(0,0,0,0.9);
+	margin-top: 75px;
+	padding: 10px;
+	border-radius:15px;
+}
+.displayScreen{
+	width: auto;
+	height: 100px;
+	background-color: rgba(98, 103, 124, 0.78);
+	text-align: center;
+	font-size: 100px;
+	border-radius: 20px;
+	margin: 5px;
+}
+.buttonCont{
+	display: flex;
+	flex-direction: row;
+}
+.numButtons{
+	height: auto;
+	width: auto;
+	padding: 20px;
+	text-align: center;
+	margin: 5px;
+}
+
+.functionButtons{
+	height:	auto;
+	width: auto;
+	padding: 20px;
+	text-align: center;
+	margin: 5px;
+
+}
+.button{
+	background-color: rgb(255, 232, 193);
+	height: 75px;
+	width: 75px;
+	font-size: 1.5em;
+	margin: 3.5px;
+	border-radius: 10px;
+}
