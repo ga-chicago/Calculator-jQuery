@@ -65,6 +65,7 @@ display.text(number_array1.join(""));
 
 
 const add = () => {
+if (buffer === 0) {
 if (number_array2 !== 0.1) {
 number_array2 = parseInt(number_array1.join("")) + number_array2;
 }
@@ -74,10 +75,10 @@ number_array1 = [];
 console.log(number_array2, number_array1);
 display.text(number_array2);
 argument.text("PLUS");
-
-}
+}}
 
 const sub = () => {
+if (buffer === 0) {
 if (number_array2 !== 0.1) {
 number_array2 = number_array2 - parseInt(number_array1.join(""));
 }
@@ -87,9 +88,10 @@ number_array1 = [];
 console.log(number_array2, number_array1);
 display.text(number_array2);
 argument.text("MINUS");
-}
+}}
 
 const multi = () => {
+if (buffer === 0) {
 if (number_array2 !== 0.1) {
 number_array2 = parseInt(number_array1.join("")) * number_array2;
 }
@@ -100,9 +102,10 @@ number_array1 = [];
 console.log(number_array2, number_array1);
 display.text(number_array2);
 argument.text("TIMES");
-}
+}}
 
 const divided = () => {
+if (buffer === 0) {
 if (number_array2 !== 0.1) {
 number_array2 = number_array2 / parseInt(number_array1.join(""));
 }
@@ -113,8 +116,7 @@ number_array1 = [];
 console.log(number_array2, number_array1);
 display.text(number_array2);
 argument.text("DIVIDE");
-}
-
+}}
 const equal = () => {
 if (buffer === "add") {number_array2 = parseInt(number_array1.join("")) + number_array2;}
 if (buffer === "sub") {number_array2 = number_array2 - parseInt(number_array1.join(""));}
