@@ -48,7 +48,7 @@ console.log('working');
 
 
 		let display = $('<div>');// = $('<div>').on('click', (e) => {		});
-		display.text("00000000");
+		display.text("0");
 		$(".number").append(display);
 		display.css("background-color", "red");
 
@@ -162,9 +162,10 @@ argument.text("DIVIDED");
 }
 
 const equal = () => {
+	console.log(state);
+if (state == "waiting" ) {clear_it();}
 //if (number_array2 === 0.1) {console.log("ok"); display.text("0000000");}
 //else {
-console.log(number_array3, number_array2, number_array1,buffer);
 
 if (buffer === "add") {number_array2 = parseInt(number_array1.join("")) + number_array2;}
 if (buffer === "sub") {number_array2 = number_array2 - parseInt(number_array1.join(""));}
@@ -181,39 +182,9 @@ state = "do it";
 }//}
 
 const clear_it = () => {
-	state = "clear";
+state = "clear";
  number_array1 = [];
  buffer = 0;
  number_array2 = 0;
-display.text("0000000");
-
+display.text("0");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
