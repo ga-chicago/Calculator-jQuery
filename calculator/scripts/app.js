@@ -2,7 +2,7 @@
 $(document).ready(function() {
    result = 0;
    revEntry = 0;
-   operation = null;
+   equation = null;
   let currentEntry = "0";
   updateDisplay(result);
 
@@ -20,14 +20,14 @@ $(document).ready(function() {
       if (currentEntry === "0") currentEntry = buttonClicked;
       else currentEntry = currentEntry + buttonClicked;
     } 
-    else if (isOperator(buttonClicked)) {
+    else if (isFunction(buttonClicked)) {
       prevEntry = parseFloat(currentEntry);
-      operation = buttonClicked;
+      equation = buttonClicked;
       currentEntry = "";
     }
     else if (buttonClicked === "=") {
-      currentEntry = operate(prevEntry, currentEntry, operation);
-      operation = null;
+      currentEntry = equations(prevEntry, currentEntry, equation);
+      equation = null;
     }
 
     updateDisplay(currentEntry);
@@ -43,18 +43,18 @@ const isNumber = (value) => {
   return !isNaN(value);
 };
 
-const isOperator = (value) => {
+const isFunction = (value) => {
   return value === "/" || value === "*" || value === "+" || value === "-";
 };
 
-const operate = (a, b, operation) => {
+const equations = (a, b, equation) => {
   a = parseFloat(a);
   b = parseFloat(b);
-  console.log(a, b, operation);
-  if (operation === "+") return a + b;
-  if (operation === "-") return a - b;
-  if (operation === "*") return a * b;
-  if (operation === "/") return a / b;
+  console.log(a, b, equation);
+  if (equation === "+") return a + b;
+  if (equation === "-") return a - b;
+  if (equation === "*") return a * b;
+  if (equation === "/") return a / b;
 };
 const hover = () =>{
 	$('.button').hover(function(){
