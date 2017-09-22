@@ -1,0 +1,52 @@
+html, body {
+	height: 100%;
+}
+
+#outer-shell {
+	display: flex;
+	background-color: silver;
+	height: 80%;
+	width: 40%;
+	margin: 2% auto;
+	border: 3px solid magenta;
+	border-radius: 60px;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+
+#output-screen {
+	margin: auto;
+	margin-top: 15%;
+	margin-bottom: 3%;
+	height: 12%;
+	width: 84%;
+	background-color: black;
+	color: green;
+	font-size: 8vh;
+	text-align: right;
+}
+
+#clear-button {
+	background-color: red;
+	height: 6%;
+	margin: auto;
+	width: 60%;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 2.8vh;
+	color: white;
+	font-family: verdana;
+}
+
+.input-buttons {
+	background-color: #444444;
+	width: 90%;
+	margin: 1% auto;
+	height: 55%;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 auto;
+	opacity: 1;
+	border: 2px solid black;
+}
