@@ -5,36 +5,43 @@ console.log('working');
 		const number = i;
 		const square = $('<div>').on('click', (e) => { number_add(number);	});
 		square.text(i);
+		square.addClass("button1");
 		$(".buttons").append(square);
 		square.css("background-color", "red");
 	}
 
 		const plus = $('<div>').on('click', (e) => { add();	});
 		plus.text("+");
+		plus.addClass("button2");
 		$(".buttons2").append(plus);
 		plus.css("background-color", "red");
 
 		const minus = $('<div>').on('click', (e) => {	sub();	});
 		minus.text("-");
+		minus.addClass("button2");
 		$(".buttons2").append(minus);
 		minus.css("background-color", "red");
 
 		const times = $('<div>').on('click', (e) => {	multi();	});
 		times.text("x");
+		times.addClass("button2");
 		$(".buttons2").append(times);
 		times.css("background-color", "red");
 
 		const divide = $('<div>').on('click', (e) => {	divided();	});
 		divide.text("/");
+		divide.addClass("button2");
 		$(".buttons2").append(divide);
 		divide.css("background-color", "red");
 
 		const equals = $('<div>').on('click', (e) => {	equal();	});
 		equals.text("=");
+		equals.addClass("button2");
 		$(".buttons2").append(equals);
 		equals.css("background-color", "red");
 
 		const clear_ok = $('<div>').on('click', (e) => {	clear_it();	});
+		clear_ok.addClass("button2");
 		clear_ok.text("CLEAR");
 		$(".buttons2").append(clear_ok);
 		clear_ok.css("background-color", "red");
