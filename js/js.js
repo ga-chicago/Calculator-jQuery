@@ -59,7 +59,7 @@ console.log('working');
 
 state = "clear";
 let number_array1 = [];
-number_array1[0] = 0;
+//number_array1[0] = 0;
 let buffer = 0;
 let number_array2 = 0;
 let number_array3 = 0;
@@ -67,6 +67,7 @@ let number_array3 = 0;
 
 const number_add = (number) => {
 if (buffer === "x") { clear_it();}
+if ((number_array1.length == 0)&&(number == "0")) {return;}
 number_array1.push(number);
 state = "its ok"
 display.text(number_array1.join(""));
