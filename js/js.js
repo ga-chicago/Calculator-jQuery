@@ -6,49 +6,49 @@ console.log('working');
 		const square = $('<div>').on('click', (e) => { number_add(number);	});
 		square.text(i);
 		$(".buttons").append(square);
-		square.css("background-color", "pink");
+		square.css("background-color", "#79A68D");
 	}
 
 		const plus = $('<div>').on('click', (e) => { add();	});
 		plus.text("+");
 		$(".buttons2").append(plus);
-		plus.css("background-color", "pink");
+		plus.css("background-color", "#79A68D");
 
 		const minus = $('<div>').on('click', (e) => {	sub();	});
 		minus.text("-");
 		$(".buttons2").append(minus);
-		minus.css("background-color", "pink");
+		minus.css("background-color", "#79A68D");
 
 		const times = $('<div>').on('click', (e) => {	multi();	});
 		times.text("x");
 		$(".buttons2").append(times);
-		times.css("background-color", "pink");
+		times.css("background-color", "#79A68D");
 
 		const divide = $('<div>').on('click', (e) => {	divided();	});
 		divide.text("/");
 		$(".buttons2").append(divide);
-		divide.css("background-color", "pink");
+		divide.css("background-color", "#79A68D");
 
 		const equals = $('<div>').on('click', (e) => {	equal();	});
 		equals.text("=");
 		$(".buttons2").append(equals);
-		equals.css("background-color", "pink");
+		equals.css("background-color", "#79A68D");
 
 		const clear_ok = $('<div>').on('click', (e) => {	clear_it();	});
 		clear_ok.text("CLEAR");
 		$(".buttons2").append(clear_ok);
-		clear_ok.css("background-color", "pink");
+		clear_ok.css("background-color", "#79A68D");
 
 
 		let display = $('<div>');// = $('<div>').on('click', (e) => {		});
 		display.text("00000000");
 		$(".number").append(display);
-		display.css("background-color", "pink");
+		display.css("background-color", "#79A68D");
 
 		let argument = $('<div>');// = $('<div>').on('click', (e) => {		});
 		argument.text("");
 		$(".number").append(argument);
-		argument.css("background-color", "pink");
+		argument.css("background-color", "#79A68D");
 
 state = "clear";
 let number_array1 = [];
