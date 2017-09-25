@@ -25,9 +25,9 @@ User stories are a great way to break down what the different features of the we
 
 ## Setup
 
-1. Create a directory in your `morning` student lab folder called `calculator`.
+<!-- 1. Create a directory in your `morning` student lab folder called `calculator`. -->
 
-2. Create 3 files. a javascript file, a css file, and an html file (you choose the names).
+<!-- 2. Create 3 files. a javascript file, a css file, and an html file (you choose the names).
 
 3. In your html file, add the boilerplate code.
 
@@ -37,7 +37,7 @@ User stories are a great way to break down what the different features of the we
 
 5. Using a script tag, link the JS file to your html file (where does this script tag go? If you don't know, do some Googling).
 
-6. Add a line to your .js file `console.log("My calculator javascript file is connected")`. Open your .html file in your browser. Use your Chrome Dev Tools and look at the console. Do you see your note? If you do, success! You're linked. If you don't see it, then something is amiss.
+6. Add a line to your .js file `console.log("My calculator javascript file is connected")`. Open your .html file in your browser. Use your Chrome Dev Tools and look at the console. Do you see your note? If you do, success! You're linked. If you don't see it, then something is amiss. -->
 
 ## Design your calculator.
 
